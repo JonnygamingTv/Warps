@@ -136,7 +136,8 @@ namespace Warps
                     { "warps_list_header", "List of warps, There are {0} warps set."},
                     { "warps_list", "Warps: {0}."},
                     { "insufficient_funds", "Error: You don't have enough {0}s to use this command." },
-                    { "charge_success", "You have been charged {0} {1}, your balance is now {2} {3}." }
+                    { "charge_success", "You have been charged {0} {1}, your balance is now {2} {3}." },
+                    { "warp_missing_perm", "You are not allowed to warp {0}." }
                 };
             }
         }

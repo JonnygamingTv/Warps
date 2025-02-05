@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Warps")]
 [assembly: AssemblyDescription("Adds warps to a server.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("JonHosting")]
 [assembly: AssemblyProduct("Warps")]
 [assembly: AssemblyCopyright("Cartman-2000 ©  2015")]
 [assembly: AssemblyTrademark("")]
