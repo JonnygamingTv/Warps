@@ -8,7 +8,7 @@ namespace Warps
 {
     public class WarpDataManager
     {
-        private Dictionary<string, Warp> WarpsData = new Dictionary<string, Warp>();
+        private Dictionary<string, Warp> WarpsData = new Dictionary<string, Warp>(StringComparer.InvariantCultureIgnoreCase);
 
 
         public WarpDataManager()
@@ -72,6 +72,7 @@ namespace Warps
 
         public Warp GetWarp(string name)
         {
+            if(WarpsData.TryGetValue((Warps.MapName + "." + name).Sanitze(), out Warp val)) return val;
             return WarpsData.Values.FirstOrDefault(warpData => warpData.Name.Sanitze().ToLower() == name.Sanitze().ToLower() && warpData.World.Sanitze().ToLower() == Warps.MapName.Sanitze().ToLower());
         }
 
