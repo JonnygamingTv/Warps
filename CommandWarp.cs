@@ -55,11 +55,6 @@ namespace Warps
             UnturnedPlayer unturnedTarget = command.GetUnturnedPlayerParameter(1);
             if (warp != null)
             {
-                if (!caller.IsAdmin && !(caller is ConsolePlayer) && !caller.HasPermission("warp." + warp.Name) && caller.HasPermission("warp.*"))
-                {
-                    UnturnedChat.Say(caller, Warps.Instance.Translate("warp_missing_perm", warp.Name));
-                    return;
-                }
                 if (unturnedTarget != null && (caller.HasPermission("warp.other") || caller.IsAdmin || caller is ConsolePlayer))
                 {
                     if (unturnedTarget.Stance == EPlayerStance.DRIVING || unturnedTarget.Stance == EPlayerStance.SITTING)
@@ -94,6 +89,11 @@ namespace Warps
                 }
                 else
                 {
+                    if (!caller.HasPermission("warp." + warp.Name) && !caller.HasPermission("warp.*"))
+                    {
+                        UnturnedChat.Say(caller, Warps.Instance.Translate("warp_missing_perm", warp.Name));
+                        return;
+                    }
                     UnturnedPlayer unturnedCaller = (UnturnedPlayer)caller;
                     if (unturnedCaller.Stance == EPlayerStance.DRIVING || unturnedCaller.Stance == EPlayerStance.SITTING)
                     {

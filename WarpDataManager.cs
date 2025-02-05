@@ -1,4 +1,5 @@
-﻿using Rocket.Core.Logging;
+﻿using Rocket.API;
+using Rocket.Core.Logging;
 using Steamworks;
 using System;
 using System.Collections.Generic;
@@ -56,13 +57,13 @@ namespace Warps
 
         }
 
-        public List<Warp> SearchWarps(string name)
+        public List<Warp> SearchWarps(string name, IRocketPlayer caller)
         {
             if (name == null)
             {
-                return WarpsData.Values.Where(warpData => warpData.World.ToLower() == Warps.MapName).OrderBy(warp => warp.Name).ToList();
+                return WarpsData.Values.Where(warpData => warpData.World.ToLower() == Warps.MapName && caller.HasPermission("warp." + warpData.Name)).OrderBy(warp => warp.Name).ToList();
             }
-            return WarpsData.Values.Where(warpData => warpData.Name.Contains(name.ToLower()) && warpData.World.ToLower() == Warps.MapName).OrderBy(warp => warp.Name).ToList();
+            return WarpsData.Values.Where(warpData => warpData.Name.Contains(name.ToLower()) && warpData.World.ToLower() == Warps.MapName && caller.HasPermission("warp." + warpData.Name)).OrderBy(warp => warp.Name).ToList();
         }
 
         public List<Warp> SearchWarps(CSteamID cSteamID)

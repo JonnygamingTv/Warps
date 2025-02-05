@@ -49,7 +49,7 @@ namespace Warps
                 UnturnedChat.Say(caller, Warps.Instance.Translate("warps_help"));
                 return;
             }
-            List<Warp> WarpsList = Warps.warpsData.SearchWarps(name);
+            List<Warp> WarpsList = Warps.warpsData.SearchWarps(name, caller);
 
             if (WarpsList.Count == 0)
             {
