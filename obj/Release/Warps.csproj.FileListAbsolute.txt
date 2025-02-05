@@ -1,0 +1,8 @@
+D:\downloads\Warps-master\Warps-master\obj\Release\Warps.csproj.CoreCompileInputs.cache
+D:\downloads\Warps-master\Warps-master\bin\Release\Warps.dll
+D:\downloads\Warps-master\Warps-master\bin\Release\Warps.pdb
+D:\downloads\Warps-master\Warps-master\bin\Release\com.rlabrecque.steamworks.net.dll
+D:\downloads\Warps-master\Warps-master\obj\Release\Warps.csproj.CopyComplete
+D:\downloads\Warps-master\Warps-master\obj\Release\Warps.dll
+D:\downloads\Warps-master\Warps-master\obj\Release\Warps.pdb
+D:\downloads\Warps-master\Warps-master\obj\Release\Warps.csproj.AssemblyReference.cache

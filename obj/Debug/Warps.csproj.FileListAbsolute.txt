@@ -1,0 +1,6 @@
+D:\downloads\Warps-master\Warps-master\bin\Debug\Warps.dll
+D:\downloads\Warps-master\Warps-master\bin\Debug\Warps.pdb
+D:\downloads\Warps-master\Warps-master\obj\Debug\Warps.csproj.AssemblyReference.cache
+D:\downloads\Warps-master\Warps-master\obj\Debug\Warps.csproj.CoreCompileInputs.cache
+D:\downloads\Warps-master\Warps-master\obj\Debug\Warps.dll
+D:\downloads\Warps-master\Warps-master\obj\Debug\Warps.pdb
