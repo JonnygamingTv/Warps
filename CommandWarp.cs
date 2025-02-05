@@ -62,6 +62,11 @@ namespace Warps
                         UnturnedChat.Say(caller, Warps.Instance.Translate("warp_cant_warp_in_car"));
                         return;
                     }
+                    if(!caller.HasPermission("warp." + warp.Name) && !caller.HasPermission("warp.*"))
+                    {
+                        UnturnedChat.Say(caller, Warps.Instance.Translate("warp_missing_perm", warp.Name));
+                        return;
+                    }
                     if (Warps.CheckUconomy())
                         if (Warps.Instance.Configuration.Instance.WarpOtherChargeEnable && Warps.Instance.Configuration.Instance.WarpOtherCost > 0.00m)
                             if (!Warps.TryCharge(caller, Warps.Instance.Configuration.Instance.WarpOtherCost))
